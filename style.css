@@ -1,0 +1,28 @@
+body {
+  margin: 100px;
+}
+
+h1 {
+  color: rgb(68, 155, 226);
+  text-align: center;
+  padding: top 30px;
+  font-size: 70px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3 {
+  color: rgb(146, 146, 146);
+}
+
+h2 {
+  color: rgb(38, 65, 90);
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#standout {
+  color: rgb(43, 113, 226);
+  font-family: fantasy;
+}
