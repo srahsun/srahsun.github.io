@@ -1,13 +1,22 @@
 body {
   margin: 100px;
+  line-height: 2;
+  border-style: solid;
+  border-width: 100px;
+  border-color: rgb(0, 162, 255);
+  border-radius: 20px;
+  padding: 50px;
 }
 
 h1 {
-  color: rgb(68, 155, 226);
+  color: #ff0505;
   text-align: center;
   padding: top 30px;
   font-size: 70px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: -10px -10px rgba(0, 0, 0, 0.4),
+    -20px -20px rgba(60, 115, 255, 0.3), -30px -30px rgba(0, 0, 0, 0.2),
+    -40px -40px rgba(0, 0, 0, 0.1), -50px -50px rgba(0, 0, 0, 0.05);
 }
 
 h3 {
@@ -16,6 +25,8 @@ h3 {
 
 h2 {
   color: rgb(38, 65, 90);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #449be2;
 }
 
 p {
@@ -23,6 +34,26 @@ p {
 }
 
 #standout {
-  color: rgb(43, 113, 226);
+  color: rgb(6, 70, 155);
   font-family: fantasy;
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#dot {
+  color: rgb(222, 77, 238);
+  font-family: cursive;
+}
+
+#dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+#no {
+  color: red;
+}
+
+#line {
+  text-decoration-line: underline;
 }
