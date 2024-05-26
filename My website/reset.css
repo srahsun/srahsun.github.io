@@ -1,7 +1,14 @@
 body,
 ul {
   margin: 0;
-  padding: 0;
+  padding: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Style the video element */
+#custom-video-player {
+  width: 100%; /* Set width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /*customising the header*/
@@ -41,7 +48,7 @@ header nav ul li button:hover {
   background-color: #555;
 }
 
-/* Style the footer */
+/* Style the footer - just a basic footer that gives the site some structure */
 footer {
   background-color: rgb(207, 172, 255);
   color: white;
@@ -49,10 +56,11 @@ footer {
   text-align: center;
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 97.8%;
 }
 
-/* Style the navigation menu in the footer */
+/* Styling the navigation menu in the footer to ensure that 
+users are able to navigate the site easily - large buttons with clicking/popping noise*/
 footer nav ul {
   list-style: none;
   display: flex;
@@ -71,6 +79,7 @@ footer nav ul li a {
   font-size: 1em;
 }
 
+/* I think that I removed this part because i did not need it, this was for the play, pause text */
 footer nav ul li a:hover {
   text-decoration: underline;
 }

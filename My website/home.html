@@ -12,11 +12,25 @@
       <h1>Home</h1>
       <nav>
         <ul>
-          <li><button onclick="location.href='home.html'">Home</button></li>
-          <li><button onclick="location.href='videos.html'">Videos</button></li>
-          <li><button onclick="location.href='music.html'">Music</button></li>
           <li>
-            <button onclick="location.href='playlist.html'">Playlist</button>
+            <button id="home-button" onclick="navigateTo('home.html')">
+              Home
+            </button>
+          </li>
+          <li>
+            <button id="videos-button" onclick="navigateTo('videos.html')">
+              Videos
+            </button>
+          </li>
+          <li>
+            <button id="music-button" onclick="navigateTo('music.html')">
+              Music
+            </button>
+          </li>
+          <li>
+            <button id="playlist-button" onclick="navigateTo('playlist.html')">
+              Playlist
+            </button>
           </li>
         </ul>
       </nav>
@@ -25,12 +39,48 @@
     <main>
       <section>
         <h2>Welcome to My Website</h2>
-        <p>This is the home page.</p>
+        <h3>Assignment brief:</h3>
+        <p>
+          <!-- chose to incorporate assignment brief to fit more content into the page, 
+          to give the site a sense of completion-->
+
+          For this assignment, your primary responsibility is to revamp the
+          website's design and customize the existing media player code based on
+          one of the specified contexts below. Your creative freedom is
+          encouraged within the constraints of the given options:
+        </p>
+        <ul id="song-list">
+          <li>Music for relaxation/study</li>
+          <li>Cooking/crafting tutorial</li>
+          <li>Music video</li>
+          <li>Video art</li>
+          <li>DJ mix</li>
+          <li>Music album</li>
+        </ul>
+        <p>
+          The website already features a partially developed media player. Your
+          role is to fill in the missing interactivity in the video player and
+          tailor it to suit your chosen context. Furthermore, you should also
+          document any new additions or modifications made to the code.
+        </p>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
+    <audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+    <script>
+      function navigateTo(url) {
+        const clickSound = document.getElementById("click-sound");
+        clickSound.currentTime = 0; // Rewind to the start
+        clickSound.play();
+
+        // Delay navigation to ensure the sound is played
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300); // Adjust the delay as needed
+      }
+    </script>
   </body>
 </html>

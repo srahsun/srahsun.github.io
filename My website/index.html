@@ -10,23 +10,39 @@
   </head>
 
   <body>
-    <!-- Header Section -->
+    <!-- Header Section, I chose to keep the header the same throughout the site. I took me
+    a while to figure out how to navigate between the sites, whilst keeping the popping noise. 
+  I used a few online forums to guide me. In the end, I coded the noise to occur first, before
+  the navigation, so that both elements of the button could happen without disrupting one another. -->
     <header>
-      <h1>Music video</h1>
+      <h1>Music Video</h1>
       <nav>
         <ul>
-          <li><button onclick="location.href='home.html'">Home</button></li>
-          <li><button onclick="location.href='videos.html'">Videos</button></li>
-          <li><button onclick="location.href='music.html'">Music</button></li>
           <li>
-            <button onclick="location.href='playlist.html'">Playlist</button>
+            <button id="home-button" onclick="navigateTo('home.html')">
+              Home
+            </button>
+          </li>
+          <li>
+            <button id="videos-button" onclick="navigateTo('videos.html')">
+              Videos
+            </button>
+          </li>
+          <li>
+            <button id="music-button" onclick="navigateTo('music.html')">
+              Music
+            </button>
+          </li>
+          <li>
+            <button id="playlist-button" onclick="navigateTo('playlist.html')">
+              Playlist
+            </button>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Navigation Section -->
-
     <main class="container">
       <div class="media-player">
         <video id="custom-video-player" controls>
@@ -45,8 +61,8 @@
               height="24"
             />
           </button>
-
           <section id="home">
+            <!-- I edited this out and put my own content in. This also prompted me to make different pages for each one -->
             <h2>Welcome to My Website</h2>
             <p>This is the home section.</p>
           </section>
@@ -62,8 +78,6 @@
             <h2>Playlist</h2>
             <p>This is the playlist section.</p>
           </section>
-
-          <!-- add the missing buttons or functionality here -->
           <div class="progress-bar">
             <span id="progress-bar-fill"></span>
           </div>
@@ -74,11 +88,10 @@
       <section>
         <h2>Additional Content</h2>
         <p>This is where you can showcase any other relevant content.</p>
-        <!-- Add more content as needed -->
       </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- I edited out the icons -->
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>
       <a href="https://icons8.com/icon/59862/play">Play</a> icon by
@@ -86,5 +99,20 @@
       <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
       <a href="https://icons8.com">Icons8</a>
     </footer>
+
+    <audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+
+    <script>
+      function navigateTo(url) {
+        const clickSound = document.getElementById("click-sound");
+        clickSound.currentTime = 0; // Rewind to the start
+        clickSound.play();
+
+        // Delay navigation to ensure the sound is played
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300); // adjusted delay to 300
+      }
+    </script>
   </body>
 </html>

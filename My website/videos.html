@@ -15,12 +15,10 @@
       <h1>Music video</h1>
       <nav>
         <ul>
-          <li><button onclick="location.href='home.html'">Home</button></li>
-          <li><button onclick="location.href='videos.html'">Videos</button></li>
-          <li><button onclick="location.href='music.html'">Music</button></li>
-          <li>
-            <button onclick="location.href='playlist.html'">Playlist</button>
-          </li>
+          <li><button id="home-button" onclick="navigateTo('home.html')">Home</button></li>
+        <li><button id="videos-button" onclick="navigateTo('videos.html')">Videos</button></li>
+        <li><button id="music-button" onclick="navigateTo('music.html')">Music</button></li>
+        <li><button id="playlist-button" onclick="navigateTo('playlist.html')">Playlist</button></li>
         </ul>
       </nav>
     </header>
@@ -46,7 +44,10 @@
       <!-- Additional Content Section -->
       <section>
         <h2>About this video</h2>
-        <p>This is where you can showcase any other relevant content.</p>
+        <p>I have chosen to recreate a music video site. Users are able to view this music video, whilst also interacting with other
+          elements as well. </p>
+          <p>This may include the header, and the different pages of the site.</p>
+        
         <!-- Add more content as needed -->
       </section>
     </main>
@@ -54,10 +55,20 @@
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
+
     </footer>
+    <audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+    <script>
+      function navigateTo(url) {
+        const clickSound = document.getElementById('click-sound');
+        clickSound.currentTime = 0; // Rewind to the start
+        clickSound.play();
+        
+        // Delay navigation to ensure the sound is played
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300); // Adjust the delay as needed
+      }
+    </script>
   </body>
 </html>
