@@ -6,5 +6,5 @@ function navigateTo(url) {
   // Delay navigation to ensure the sound is played
   setTimeout(() => {
     window.location.href = url;
-  }, 300); // Adjust the delay as needed
+  }, 300); // can adjust if needed
 }
