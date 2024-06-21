@@ -1,0 +1,100 @@
+/* Styling the body to center content and set background color */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Styling the main title */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Container to hold the shapes in a flexible layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* General shape styling */
+.shape {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: grab;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+/* Specific colors for each shape. "Some autistic children
+ often find it impossible to touch some objects; others
+  cannot tolerate certain smells, etc. The most often 
+  reported visual sensitivities are sensitivity to 
+  bright light, fluorescent light, colours and certain 
+  patterns (especially stripes)."  
+
+Sensory Intolerance in Autism - Integrated Treatment Services
+
+Integrated Treatment Services
+
+Thus, after conducting this research, I have decided to use
+muted, but still familiar colours for the squares. 
+
+To make the interface less overwhelming, I deliberately chose
+to use the same square, as opposed to many different shapes
+littering the screen. */
+.shape.red {
+  background-color: rgb(236, 76, 76);
+}
+.shape.blue {
+  background-color: rgb(57, 57, 156);
+}
+.shape.green {
+  background-color: green;
+}
+.shape.yellow {
+  background-color: rgb(222, 177, 13);
+}
+.shape.purple {
+  background-color: rgb(121, 66, 121);
+}
+.shape.orange {
+  background-color: rgb(224, 126, 5);
+}
+.shape.pink {
+  background-color: rgb(215, 123, 138);
+}
+.shape.brown {
+  background-color: rgb(145, 74, 74);
+}
+.shape.cyan {
+  background-color: rgb(100, 180, 180);
+}
+.shape.lime {
+  background-color: rgb(88, 205, 88);
+}
+
+/* The styling of the reset button was very simplistically
+done, to draw attention away from the words, and onto the 
+shapes and colours. With a target audience of kids aged 3-9, 
+there will most likely be an adult present with them, to explain
+the rules of this interactive learning tool. */
+#reset {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
